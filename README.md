@@ -1,5 +1,6 @@
 # ✨ ScratchMagic
-
+![Android](https://img.shields.io/badge/Platform-Android-green)
+![Kotlin](https://img.shields.io/badge/Language-Kotlin-blue)
 [![](https://jitpack.io/v/sangitapatel/MagicScratchCard.svg)](https://jitpack.io/#sangitapatel/MagicScratchCard)
 [![API](https://img.shields.io/badge/API-21%2B-brightgreen.svg)](https://android-arsenal.com/api?level=21)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
