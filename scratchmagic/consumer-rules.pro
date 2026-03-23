@@ -1,0 +1,2 @@
+-keep public class com.sangitapatel.scratchmagic.ScratchMagicView { *; }
+-keep public interface com.sangitapatel.scratchmagic.ScratchMagicView$ScratchListener { *; }

@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F4F8">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Header -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="✨ ScratchMagic"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="#1A1A2E"
+            android:layout_marginBottom="4dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="by Sangita Patel · github.com/sangitapatel"
+            android:textSize="12sp"
+            android:textColor="#888888"
+            android:layout_marginBottom="28dp"/>
+
+        <!-- ═══════════════════════════════
+             CARD 1 — Solid Colour Foil
+             ═══════════════════════════════ -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1.  Solid colour foil"
+            android:textSize="13sp"
+            android:textColor="#555555"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Card container: reward content underneath, foil on top -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:background="@drawable/smv_card_bg"
+            android:layout_marginBottom="10dp">
+
+            <!-- Prize content (shown after scratching) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🎉"
+                    android:textSize="44sp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="You Won ₹500!"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textColor="#C62828"/>
+            </LinearLayout>
+
+            <!-- Foil layer -->
+            <com.sangitapatel.scratchmagic.ScratchMagicView
+                android:id="@+id/smvColor"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:smv_foilColor="#9E9E9E"
+                app:smv_brushRadius="44dp"
+                app:smv_threshold="55"
+                app:smv_animateReveal="true"
+                app:smv_animateDuration="450"/>
+        </FrameLayout>
+
+        <!-- Progress row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="4dp">
+            <TextView
+                android:id="@+id/tvPct1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Scratched: 0%"
+                android:textSize="12sp"
+                android:textColor="#757575"/>
+        </LinearLayout>
+
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:id="@+id/prog1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            app:trackCornerRadius="4dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="32dp">
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnReveal1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                android:text="Reveal"/>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnReset1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:text="Reset"/>
+        </LinearLayout>
+
+        <!-- ═══════════════════════════════
+             CARD 2 — Local Drawable Foil
+             ═══════════════════════════════ -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2.  Local drawable foil"
+            android:textSize="13sp"
+            android:textColor="#555555"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:background="@drawable/smv_card_bg"
+            android:layout_marginBottom="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🏆"
+                    android:textSize="44sp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lucky Draw Winner!"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#E65100"/>
+            </LinearLayout>
+
+            <com.sangitapatel.scratchmagic.ScratchMagicView
+                android:id="@+id/smvDrawable"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:smv_foilDrawable="@drawable/smv_foil_texture"
+                app:smv_brushRadius="50dp"
+                app:smv_threshold="55"
+                app:smv_animateReveal="true"/>
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="32dp">
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnReveal2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                android:text="Reveal"/>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnReset2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:text="Reset"/>
+        </LinearLayout>
+
+        <!-- ═══════════════════════════════
+             CARD 3 — URL Image
+             ═══════════════════════════════ -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3.  URL image foil"
+            android:textSize="13sp"
+            android:textColor="#555555"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:background="@drawable/smv_card_bg"
+            android:layout_marginBottom="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="💰"
+                    android:textSize="44sp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Jackpot! ₹10,000"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#2E7D32"/>
+            </LinearLayout>
+
+            <com.sangitapatel.scratchmagic.ScratchMagicView
+                android:id="@+id/smvUrl"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:smv_brushRadius="52dp"
+                app:smv_threshold="60"
+                app:smv_animateReveal="true"/>
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tvStatus3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="⏳ Loading foil image…"
+            android:textSize="12sp"
+            android:textColor="#757575"
+            android:layout_marginBottom="8dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="40dp">
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnReveal3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                android:text="Reveal"/>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnReset3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:text="Reset"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

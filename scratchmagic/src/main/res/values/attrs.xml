@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ScratchMagicView">
+        <attr name="smv_brushRadius"        format="dimension" />
+        <attr name="smv_threshold"          format="float"     />
+        <attr name="smv_foilColor"          format="color"     />
+        <attr name="smv_foilDrawable"       format="reference" />
+        <attr name="smv_animateReveal"      format="boolean"   />
+        <attr name="smv_animateDuration"    format="integer"   />
+    </declare-styleable>
+</resources>
